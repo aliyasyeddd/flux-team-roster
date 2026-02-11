@@ -1,16 +1,63 @@
-# React + Vite
+# ⚽ Flux Team Roster
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A professional **Team Roster Manager** built to demonstrate the official Facebook **Flux Architecture** in a modern React environment.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🪞 Overview
 
-## React Compiler
+This project serves as a deep dive into **unidirectional data flow**. While many modern apps use simplified hooks, this project implements the original **Flux pattern** — using a central **Singleton Dispatcher** — to manage a sports team roster.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It solves the problem of **prop drilling** and unpredictable state changes by enforcing a strict circular data path.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+✨ Key things this app can do:
+
+- 🎯 **Centralized State** — Uses a Singleton Store as the *Single Source of Truth*
+- 🧠 **Action-Based Updates** — All changes are triggered via formal Actions and a Central Dispatcher
+- 📱 **Persistent Storage** — Integrated with `localStorage` so your roster survives page refreshes
+- ⚡ **Vite-Powered** — High-performance development environment bridged with legacy architecture
+
+---
+
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| React 19 | UI components and rendering logic |
+| Flux (Official Library) | Implementation of the Dispatcher pattern |
+| Vite | Modern build tool and dev server |
+| Events (EventEmitter) | Communication between the Store and UI |
+| CSS3 | Clean, focused styling for the roster interface |
+
+---
+
+## 📚 What We Have Studied
+
+Here are the key JavaScript and architectural concepts covered while building this project 🧩
+
+- 🔄 **Unidirectional Data Flow** — Understanding the `Action → Dispatcher → Store → View` loop
+- 🏗 **Singleton Pattern** — Ensuring only one Dispatcher exists for the entire application
+- 🧬 **Immutability** — Learning that React requires new array references (`[...]`) to trigger UI updates
+- 📡 **Event-Driven UI** — Using `addChangeListener` to manually subscribe React components to external data stores
+- 🔧 **Legacy Integration** — Patching modern build tools (Vite) to support Node.js built-ins like `EventEmitter`
+
+---
+
+## 🌿 Lessons Learned
+
+- 🧠 **Architecture Matters** — Understanding the original Flux pattern makes state management much less “magical”
+- 🚫 **Don’t Mutate State** — `.push()` is the enemy of React; always spread arrays to create new references
+- 🌉 **The Bridge** — Using `--legacy-peer-deps` and configuring `vite.config.js` to make old and new technologies work together
+
+---
+
+
+## 💫 Author
+
+👩‍💻 Created by **Aliya Syed**  
+> *“Build. Break. Learn. Repeat.”* 🌸
+
