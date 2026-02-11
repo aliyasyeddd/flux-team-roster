@@ -23,6 +23,48 @@ It solves the problem of **prop drilling** and unpredictable state changes by en
 
 ---
 
+## 🔥 Full Data Flow
+
+- User triggers action
+- Action dispatched
+- Dispatcher sends action to Store
+- Store updates _players
+- Store emits "change"
+- React component re-renders
+
+---
+
+## 🧠 In Simple Words
+
+This file represents a **Flux Store**.
+
+It:
+
+- 📦 Stores team players data
+- 👂 Listens for dispatched actions
+- 🔄 Updates the internal data based on action type
+- 📢 Notifies React components when data changes
+
+---
+
+## 🏗 Architecture Pattern
+
+This follows the **Classic Flux Store Pattern**:
+
+1. **Action** is dispatched.
+2. **Dispatcher** sends the action to the Store.
+3. **Store** updates its private state.
+4. Store emits a `"change"` event.
+5. **React components** re-render with updated data.
+
+---
+
+## 🔁 Data Flow (Unidirectional)
+
+User Action → Dispatcher → Store → React View
+This ensures predictable and centralized state management.
+
+
 ## 🧱 Tech Stack
 
 | Technology | Purpose |
